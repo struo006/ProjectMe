@@ -1,9 +1,9 @@
 const modal = (state = {}, action) => {
   switch (action.type) {
-    case 'TOGGLE_SHOW_CREATE_MODAL': {
+    case 'SET_PAGE': {
       return {
         ...state,
-        shouldShowModal: action.shouldShowModal,
+        screenType: action.screenType,
       }
     }
     default:

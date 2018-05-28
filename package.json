@@ -1,8 +1,8 @@
 {
-  "name": "@ctg-ui/Navbar-ui",
+  "name": "ProjectMe",
   "version": "1.0.0",
   "description": "",
-  "main": "./dist/Navbar-ui.js",
+  "main": "./dist/ProjectMe.js",
   "scripts": {
     "build": "webpack --config webpack.production.config.js --progress --profile --colors",
     "start": "webpack-dev-server --progress --profile --colors",
@@ -16,16 +16,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ahu009/TraceMyCode"
+    "url": "https://github.com/struo006/ProjectMe"
   },
   "engines": {
     "node": "6.9.2"
   },
-  "author": "Abe hu",
+  "author": "Steven Truong",
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^4.0.0",
-    "firebase": "^4.9.1",
     "react": "15.6.1",
     "react-bootstrap": "^0.32.1",
     "react-dom": "15.4.2",

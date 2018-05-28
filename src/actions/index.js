@@ -1,8 +1,8 @@
-export function toggleShowCreate (shouldShowModal) {
+export function setPage (screenType) {
   return dispatch => new Promise((resolve) => {
     return resolve(dispatch({
-      type: 'TOGGLE_SHOW_CREATE_MODAL',
-      shouldShowModal: shouldShowModal
+      type: 'SET_PAGE',
+      screenType: screenType
     }));
   });
 }

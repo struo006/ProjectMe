@@ -2,8 +2,9 @@ import React from 'react';
 import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
 
 import style from './App.scss';
-import NavBar from './../NavBar';
-import Modals from './../Modals';
+import NavBar from './../BottomPage';
+import {connect} from 'react-redux';
+// import Modals from './../Modals';
 
 /**
  * App Component
@@ -17,10 +18,15 @@ class App extends React.Component {
   render () {
     return (
       <div>
+        {console.log(this.props.screen.screenType)}
         <Router>
           <div className={style.App}>
-            <Route path='/' component={NavBar} />
-            <Route path='/' component={Modals} />
+          <NavBar/>
+          {
+            this.props.screen.screenType === "Project" ? console.log("This is where you call your project component")
+            : this.props.screen.screenType === "Experience" ? console.log("This is where you call your experience component")
+            : this.props.screen.screenType === "Education" ? console.log("Education") : null
+          }
           </div>
         </Router>
       </div>
@@ -28,4 +34,8 @@ class App extends React.Component {
   }
 }
 
-export default App;
+const mapStateToProps = state => ({
+  screen: state || {},
+})
+
+export default connect(mapStateToProps, null)(App)
