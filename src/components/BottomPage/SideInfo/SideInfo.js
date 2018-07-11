@@ -1,6 +1,7 @@
 import React from 'react';
 import style from './SideInfo.scss';
-
+// import {setPage} from './../../../actions';
+// import {connect} from 'react-redux';
 /**
  * UI Component
  * @type {Class}
@@ -27,12 +28,16 @@ class SideInfo extends React.Component {
   render () {
 
     return (
-      <div className={style.container} onClick={this.toggle}>
-      <p> Email: struo006@ucr.edu </p>
-      <p> Phone number: (626)-675-4063 </p>
+      <div className={style.container} >
+        <p> Email: steventr96@gmail.com </p>
+        <p> Phone number: (626)-675-4063 </p>
       </div>
     );
   }
 }
-
 export default SideInfo;
+// const mapDispatchToProps = dispatch => ({
+//   setPage: screenType => dispatch(setPage(screenType))
+// })
+//
+// export default connect(null, mapDispatchToProps)(SideInfo)

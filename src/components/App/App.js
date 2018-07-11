@@ -2,8 +2,10 @@ import React from 'react';
 import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
 
 import style from './App.scss';
-import NavBar from './../BottomPage';
+import BottomPage from './../BottomPage';
 import {connect} from 'react-redux';
+import HomePage from './../HomePage';
+import TopPage from './../TopPage';
 // import Modals from './../Modals';
 
 /**
@@ -21,11 +23,14 @@ class App extends React.Component {
         {console.log(this.props.screen.screenType)}
         <Router>
           <div className={style.App}>
-          <NavBar/>
+          <TopPage />
+          <BottomPage/>
           {
-            this.props.screen.screenType === "Project" ? console.log("This is where you call your project component")
-            : this.props.screen.screenType === "Experience" ? console.log("This is where you call your experience component")
-            : this.props.screen.screenType === "Education" ? console.log("Education") : null
+            this.props.screen.screenType === "Project" ? <p> {this.props.screen.screenType} </p>
+            : this.props.screen.screenType === "Experience" ? <p> {this.props.screen.screenType} </p>
+            : this.props.screen.screenType === "Education" ? <p> {this.props.screen.screenType} </p>
+            : this.props.screen.screenType === "Default" ? <HomePage />
+            : <HomePage />
           }
           </div>
         </Router>
